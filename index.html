@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batu Adventure | Paket Outbound & Gathering Terbaik di Batu Malang</title>
+    
+    <meta name="description" content="Provider outbound, family gathering, rafting, dan jeep adventure terbaik di Kota Batu Malang. Fasilitator bersertifikat dan paket hemat.">
+    <meta name="keywords" content="outbound batu, rafting batu, sewa jeep bromo, paket gathering kantor, camping coban rondo">
+    <meta name="author" content="Batu Adventure">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏔️</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & VARIABLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            /* High Contrast Palette */
+            --primary: #004d40; /* Hijau Botol Gelap (Kontras tinggi) */
+            --primary-light: #00796b;
+            --accent: #ffab00; /* Kuning Amber (Kontras dengan Hijau) */
+            --accent-hover: #ffc400;
+            --bg-body: #f8f9fa; /* Abu-abu sangat muda (Nyaman di mata) */
+            --bg-card: #ffffff;
+            --text-main: #212121; /* Hitam Pekat */
+            --text-muted: #546e7a; /* Abu-abu Kebiruan */
+            --text-light: #ffffff;
+            --border-color: #cfd8dc;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; width: 100%; height: auto; }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .section-padding { padding: 100px 0; }
+        
+        /* Typography Helper */
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            color: var(--primary);
+        }
+        
+        /* Garis bawah judul */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 5px;
+            background: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- BUTTONS (High Contrast & Functional) --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--accent);
+            color: #000000; /* Teks Hitam di atas Kuning = Kontras Maksimal */
+            border-radius: 6px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover { 
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* Tombol Outline (Untuk di atas background gelap) */
+        .btn-outline { 
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+        .btn-outline:hover { 
+            background: var(--text-light); 
+            color: var(--primary);
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            background: var(--primary);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { 
+            font-size: 1.5rem; 
+            color: var(--text-light); 
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -1px;
+            border: 2px solid var(--accent);
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+        .logo span { color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { 
+            font-weight: 600; color: #ffffff; font-size: 0.95rem; 
+            text-transform: uppercase; padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            opacity: 0.9;
+        }
+        .nav-links a:hover { color: var(--accent); border-bottom-color: var(--accent); opacity: 1; }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--text-light); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            background: #000;
+        }
+        .video-bg { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; z-index: 0; opacity: 0.85;
+        }
+        /* Overlay Gelap agar Teks Putih Terbaca Jelas */
+        .overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 77, 64, 0.75), rgba(0, 0, 0, 0.6));
+            z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; text-align: center; padding: 20px; }
+        .hero-text h1 { 
+            font-size: 3.5rem; margin-bottom: 20px; color: #ffffff; 
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.8); /* Shadow Teks agar Pop-up */
+        }
+        .hero-text p { 
+            font-size: 1.25rem; margin-bottom: 40px; color: #f1f1f1; font-weight: 400; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        /* --- ABOUT --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img img { 
+            border-radius: 10px; 
+            box-shadow: 20px 20px 0px var(--primary-light); /* Shadow solid */
+            border: 4px solid var(--primary);
+        }
+        .feature-list li { 
+            margin-bottom: 15px; font-weight: 600; color: var(--text-main);
+            display: flex; align-items: center;
+        }
+        .feature-list li::before { 
+            content: '✓'; margin-right: 15px; color: var(--accent); 
+            background: var(--primary); width: 25px; height: 25px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem;
+        }
+
+        /* --- SERVICES (Cards) --- */
+        .services-section { background: #e0f2f1; } /* Warna Hijau Mint Sangat Muda */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card {
+            background: var(--bg-card);
+            padding: 40px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-top: 5px solid var(--primary);
+            text-align: left;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); border-top-color: var(--accent); }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary); }
+        .service-card p { font-size: 0.95rem; color: var(--text-muted); }
+        .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+
+        /* --- CTA 1 --- */
+        .cta-section {
+            background: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.9)), url('https://images.unsplash.com/photo-1544473244-f6895e672d62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .cta-section h2 { color: white; margin-bottom: 15px; }
+        .cta-section p { color: #e0e0e0; font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* --- PRODUCTS (Image Cards) --- */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+            display: flex; flex-direction: column;
+        }
+        .product-card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.15); border-color: var(--primary); }
+        
+        .product-img { height: 230px; position: relative; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .product-card:hover .product-img img { transform: scale(1.1); }
+        
+        .price-badge {
+            position: absolute; top: 15px; right: 15px;
+            background: var(--accent); color: #000;
+            padding: 5px 15px; font-weight: 800; border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); font-family: 'Montserrat';
+        }
+        
+        .product-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
+        .product-info h3 { margin-bottom: 10px; font-size: 1.4rem; color: var(--primary); }
+        .product-info p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 25px; flex-grow: 1; line-height: 1.6; }
+        .product-info .btn { width: 100%; }
+
+        /* --- GALLERY --- */
+        .gallery-section { background: var(--bg-card); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; grid-auto-rows: 220px; }
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; height: 455px; } 
+        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: 0.3s; }
+        .gallery-item:hover { border-color: var(--accent); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.05); filter: brightness(0.9); }
+
+        /* --- TESTIMONI --- */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { 
+            background: var(--bg-card); padding: 35px; border-radius: 8px; 
+            border: 1px solid var(--border-color); position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .testimonial-card p { font-style: italic; color: var(--text-main); margin-bottom: 25px; }
+        .client-info { display: flex; align-items: center; gap: 15px; }
+        .client-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
+        .client-name strong { display: block; color: var(--primary); font-size: 1.1rem; }
+        .client-name small { color: var(--text-muted); font-weight: 600; }
+
+        /* --- FAQ --- */
+        .faq-item { 
+            background: var(--bg-card); border: 1px solid var(--border-color); 
+            margin-bottom: 15px; border-radius: 5px; cursor: pointer;
+        }
+        .faq-question { 
+            padding: 18px 25px; font-weight: 700; display: flex; justify-content: space-between; 
+            color: var(--primary);
+        }
+        .faq-question:hover { background-color: #f1f8e9; }
+        .faq-answer { 
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease; 
+            padding: 0 25px; color: var(--text-muted); background: #fafafa;
+        }
+        .faq-item.active .faq-answer { max-height: 200px; padding: 20px 25px; border-top: 1px solid #eee; }
+        .arrow { color: var(--accent); font-weight: 900; font-size: 1.2rem; }
+
+        /* --- CONTACT --- */
+        .contact-section { background: #00363a; color: white; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .contact-info h2 { color: var(--accent); text-align: left; margin-bottom: 20px; }
+        .contact-info h2::after { display: none; }
+        .contact-info p, .contact-info strong { color: #e0f2f1; }
+        
+        .contact-form { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .form-control { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; margin-top: 5px; color: #333; font-family: inherit; }
+        .form-control:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 5px rgba(0,77,64,0.3); }
+        .form-group { margin-bottom: 20px; }
+        .contact-form h3 { color: var(--primary); margin-bottom: 20px; }
+
+        /* --- FOOTER --- */
+        footer { background: #00251a; color: #b0bec5; padding: 70px 0 30px; text-align: center; }
+        .footer-grid { display: flex; flex-direction: column; gap: 30px; align-items: center; margin-bottom: 40px; }
+        .footer-col h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a { color: #cfd8dc; font-weight: 500; }
+        .footer-col ul li a:hover { color: var(--accent); text-decoration: underline; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 0.9rem; color: #78909c; }
+
+        /* --- ANIMATION --- */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            nav { height: 70px; }
+            .nav-links { 
+                background: var(--primary); position: absolute; top: 70px; width: 100%; 
+                flex-direction: column; padding: 30px; text-align: center; display: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            
+            .hero-text h1 { font-size: 2.5rem; }
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .about-img { order: -1; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+            .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; height: 200px; }
+        }
+
+        /* --- FLOATING BUTTONS --- */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .fab-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; text-decoration: none; border:none;}
+        .fab-btn:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+        .fab-wa { background: #25D366; color: white; position: relative; }
+        /* Animasi Pulse pada WA */
+        .fab-wa::before { content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%; background: #25D366; opacity: 0.5; z-index: -1; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.5); opacity: 0; } }
+        
+        .fab-top { background: var(--primary); color: white; opacity: 0; visibility: hidden; transform: translateY(20px); transition: 0.4s; }
+        .fab-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .fab-btn svg { width: 30px; height: 30px; fill: currentColor; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">BATU <span>ADVENTURE</span></div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#services">Aktivitas</a></li>
+                <li><a href="#products">Paket</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="https://wa.me/628123456789" class="btn btn-outline" style="padding: 5px 15px; border-color: var(--accent); color: var(--accent);">WA Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="https://videos.pexels.com/video-files/2330559/2330559-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="hero-text">
+                    <h1>Petualangan Seru di<br>Jantung Kota Batu</h1>
+                    <p>Rasakan sensasi outbound dan gathering dengan udara sejuk pegunungan. Pengalaman tak terlupakan menanti tim Anda.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="#products" class="btn">Lihat Paket</a>
+                        <a href="https://wa.me/628123456789?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20outbound%20di%20Batu" class="btn btn-outline" style="margin-left: 10px;">Konsultasi Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img reveal">
+                    <img src="https://images.unsplash.com/photo-1544986581-34c4d1f71f5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pemandangan Kota Batu Malang">
+                </div>
+                <div class="about-text reveal">
+                    <h2 class="section-title" style="text-align: left; margin: 0; width: 100%;">Kenapa Memilih Kami?</h2>
+                    <div style="width: 100px; height: 4px; background: var(--accent); margin: 10px 0 30px;"></div>
+                    
+                    <p style="margin-bottom: 20px; color: var(--text-muted);"><strong>Batu Adventure</strong> adalah partner lokal terpercaya untuk kegiatan luar ruang di Kota Wisata Batu. Kami memadukan keindahan alam pegunungan dengan program pengembangan karakter yang fun.</p>
+                    <ul class="feature-list">
+                        <li>Basecamp Eksklusif di Coban Rondo & Rais</li>
+                        <li>Konsep "Fun & Refreshing" (Anti Stress)</li>
+                        <li>Bonus Wisata Petik Apel (Musiman)</li>
+                        <li>Dokumentasi Profesional (Drone & DSLR)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding services-section">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Aktivitas Unggulan</h2>
+                <p class="section-subtitle">Pilihan kegiatan seru yang memanfaatkan kontur unik pegunungan Batu.</p>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card reveal">
+                    <span class="icon">🚙</span>
+                    <h3>Jeep Adventure</h3>
+                    <p>Menembus kabut pagi dengan Jeep 4x4 melewati jalur berlumpur dan hutan pinus menuju spot sunrise.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="icon">🛶</span>
+                    <h3>Rafting Kaliwatu</h3>
+                    <p>Arung jeram di aliran sungai Brantas dengan grade aman namun menantang adrenalin.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="icon">🎯</span>
+                    <h3>Paintball War</h3>
+                    <p>Simulasi pertempuran strategi di tengah hutan alami Coban Rondo dengan perlengkapan lengkap.</p>
+                </div>
+                <div class="service-card reveal">
+                    <span class="icon">🔥</span>
+                    <h3>Camping & BBQ</h3>
+                    <p>Menginap di tenda dengan fasilitas api unggun, jagung bakar, dan suasana malam yang syahdu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Rencanakan Gathering Impian Sekarang!</h2>
+            <p>Slot akhir pekan cepat terisi. Amankan tanggal keberangkatan Anda sebelum kehabisan.</p>
+            <a href="https://wa.me/628123456789?text=Halo,%20saya%20mau%20booking%20tanggal..." class="btn">Chat WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="products" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Pilihan Paket Hemat</h2>
+                <p class="section-subtitle">Paket lengkap tanpa biaya tersembunyi untuk grup Anda.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="product-img">
+                        <div class="price-badge">Rp 185rb/pax</div>
+                        <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff725?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Outbound Coban Rondo">
+                    </div>
+                    <div class="product-info">
+                        <h3>One Day Fun Coban</h3>
+                        <p>Tiket Masuk, Fun Games 3-4 Jam, Makan Siang Box, Snack, Fasilitator & Sound System.</p>
+                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20Paket%20Coban" class="btn">Pilih Paket</a>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-img">
+                        <div class="price-badge">Rp 375rb/pax</div>
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Jeep Adventure Batu">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jeep Fun Trail</h3>
+                        <p>Sewa Jeep (isi 4), Driver, BBM, Tiket Masuk Jalur Offroad, Makan Siang & Snack.</p>
+                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20Paket%20Jeep" class="btn">Pilih Paket</a>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-img">
+                        <div class="price-badge">Rp 650rb/pax</div>
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Villa Batu Pool">
+                    </div>
+                    <div class="product-info">
+                        <h3>2D1N Villa Gathering</h3>
+                        <p>Menginap Villa Kolam Renang, 3x Makan, BBQ Night, Outbound Pagi & Dokumentasi.</p>
+                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20Paket%20Villa" class="btn">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding gallery-section">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Galeri Momen</h2>
+                <p class="section-subtitle">Keceriaan klien kami di berbagai lokasi eksotis Batu.</p>
+            </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Building"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camping"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yoga Alam"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596401057633-565652b5e637?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Wisata Batu"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Petik Apel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <h2 class="section-title text-center">Ulasan Klien</h2>
+            <div class="testimonial-grid" style="margin-top: 60px;">
+                <div class="testimonial-card reveal">
+                    <p>"Suasana di Batu memang beda! Outboundnya seru, dingin-dingin empuk. Fasilitator Batu Adventure sangat kooperatif dan seru abis."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="client-avatar" alt="User">
+                        <div class="client-name"><strong>Pak Eko</strong><small>Bank Jatim Surabaya</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p>"Anak-anak senang sekali diajak petik apel setelah outbound. Makanannya juga enak, bakso malangnya mantap! Rekomended."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="client-avatar" alt="User">
+                        <div class="client-name"><strong>Bu Rini</strong><small>Dinas Kesehatan</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p>"Paket Jeep-nya keren abis. Jalurnya menantang tapi tetap aman. Recommended buat yang mau healing bareng teman kantor."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" class="client-avatar" alt="User">
+                        <div class="client-name"><strong>Mas Dimas</strong><small>Komunitas Motor</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding services-section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title text-center">Pertanyaan Umum</h2>
+            <div style="margin-top: 50px;">
+                <div class="faq-item reveal" onclick="toggleFaq(this)">
+                    <div class="faq-question">Lokasi kantor dimana? <span class="arrow">+</span></div>
+                    <div class="faq-answer">Kantor kami di Jl. Sultan Agung, Batu. Kegiatan bisa di Coban Rondo, Coban Talun, atau Hotel/Villa pilihan Anda.</div>
+                </div>
+                <div class="faq-item reveal" onclick="toggleFaq(this)">
+                    <div class="faq-question">Apakah suhu di sana sangat dingin? <span class="arrow">+</span></div>
+                    <div class="faq-answer">Ya, suhu rata-rata berkisar 17-22°C di siang hari. Kami sangat menyarankan peserta membawa jaket atau pakaian hangat.</div>
+                </div>
+                <div class="faq-item reveal" onclick="toggleFaq(this)">
+                    <div class="faq-question">Bisa sekalian paket Jatim Park? <span class="arrow">+</span></div>
+                    <div class="faq-answer">Bisa banget! Kami bisa mengatur rundown: Pagi Outbound, Siang/Sore lanjut rekreasi ke Jatim Park Group atau Museum Angkut.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h2 style="color: var(--accent); margin-bottom: 20px;">Hubungi Kami</h2>
+                    <p style="margin-bottom: 30px;">Siap mendiskusikan kebutuhan acara Anda? Tim kami siap membantu 24/7 untuk konsultasi gratis.</p>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong style="color:var(--accent);">📍 Alamat Basecamp:</strong><br>
+                        Jl. Panglima Sudirman No. 99, Kota Batu
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <strong style="color:var(--accent);">📧 Email:</strong><br>
+                        info@batuadventure.com
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <strong style="color:var(--accent);">📱 Telepon/WA:</strong><br>
+                        0812-3456-7890
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="text-align: center;">Kirim Pesan Cepat</h3>
+                    <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/628123456789?text=Halo,%20saya%20ingin%20tanya%20paket.'">
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Nama Lengkap Anda" required></div>
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Nomor WhatsApp" required></div>
+                        <div class="form-group"><textarea class="form-control" style="height: 120px;" placeholder="Rencana Acara (Tanggal, Jumlah Peserta)"></textarea></div>
+                        <button type="submit" class="btn" style="width: 100%; border:none;">Kirim via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BATU ADVENTURE</h3>
+                    <p>Mitra terbaik untuk kegiatan luar ruang di Kota Batu. Menghadirkan pengalaman yang menyegarkan, aman, dan berkesan.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#products">Paket Hemat</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Sosial Media</h3>
+                    <ul style="display: flex; gap: 15px; justify-content: center;">
+                        <li><a href="#">📷 Instagram</a></li>
+                        <li><a href="#">📘 Facebook</a></li>
+                        <li><a href="#">▶ YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Batu Adventure. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="fab-container">
+        <div class="fab-btn fab-top" id="btnBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Kembali ke Atas">
+            <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+        </div>
+        <a href="https://wa.me/628123456789?text=Halo%20Batu%20Adventure,%20saya%20tertarik%20info%20paket." target="_blank" class="fab-btn fab-wa" title="Chat WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }
+        function toggleFaq(el) { el.classList.toggle('active'); }
+        
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('btnBackToTop');
+            if(window.scrollY > 300) btn.classList.add('show'); else btn.classList.remove('show');
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
